@@ -1,0 +1,7 @@
+[user]
+	name = Ramiro de Zavalia
+	email = rdezavalia@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
