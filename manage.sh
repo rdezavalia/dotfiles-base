@@ -25,6 +25,7 @@ arg=${1:-"init"}
 case "$arg" in
     init)
         $stow -v -d "$stow_dir" -t "$HOME" "$package"
+        vim +PluginInstall +qall
         ;;
     rm)
         $stow -v -d "$stow_dir" -t "$HOME" -D "$package"
@@ -34,6 +35,7 @@ case "$arg" in
         "$git" pull
         popd > /dev/null
         $stow -v -d "$stow_dir" -t "$HOME" -R "$package"
+        vim +PluginInstall +qall
         ;;
 esac
 
