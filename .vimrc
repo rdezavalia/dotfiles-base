@@ -3,8 +3,8 @@
 " <vundle>
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
@@ -15,6 +15,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'jamessan/vim-gnupg'
 
+call vundle#end()
 " </vundle>
 "
 filetype indent on
