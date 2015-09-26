@@ -27,6 +27,6 @@ url="https://github.com/rdezavalia/dotfiles-base.git"
 [ ! -d "$install_path/$package" ] || { echo "ERROR: package exists"; exit 1; }
 mkdir -p "$install_path"
 pushd "$install_path" > /dev/null
-"$git" clone "$url" "$package"
+"$git" clone --recursive "$url" "$package"
 "./$package/manage.sh"
 popd > /dev/null
