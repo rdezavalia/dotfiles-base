@@ -33,6 +33,7 @@ case "$arg" in
     up)
         pushd "$scriptpath" > /dev/null
         "$git" pull
+        "$git" submodule update --init --recursive
         popd > /dev/null
         $stow -v -d "$stow_dir" -t "$HOME" -R "$package"
         vim +PluginInstall +qall
